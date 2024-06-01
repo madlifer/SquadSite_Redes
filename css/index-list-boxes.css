@@ -1,0 +1,36 @@
+.item {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    height: 280px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    margin-bottom: 5px;
+}
+
+.item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.item:hover{
+    border-color: #0ef;
+    transform: scale(1.05)
+}
+
+.item:hover h3{
+    color: #0ef;
+}
+
+.item:hover p{
+    color: #0ef;
+}

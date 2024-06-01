@@ -1,0 +1,25 @@
+.vehicleDetails { /* CHANGE THIS AS NOT NEEDED ONLY 100% HEIGHT */
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.roundBorder {
+    border-radius: 30px;
+    border: 2px solid #0ef;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}

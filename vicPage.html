@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="MJH1606" />
+        <meta
+            name="keywords"
+            content="Squad, Armor, Armour, Viewer, Guide, Vehicle, Game"
+        />
+        <meta
+            name="description"
+            content="Online 3d viewer to see Vehicle Armor in the Squad game"
+        />
+        <meta
+            name="viewport"
+            id="viewport"
+            content="width=device-width, initial-scale=0, maximum-scale=1, user-scalable=yes"
+        />
+        <title>Squad Armor Viewer</title>
+        <link
+            rel="stylesheet"
+            href="https://www.w3schools.com/w3css/4/w3.css"
+        />
+        <link rel="stylesheet" href="/css/navbar.css" />
+        <link rel="stylesheet" href="/css/scrollbar.css" />
+        <link rel="stylesheet" href="/css/preLoader.css" />
+        <link rel="stylesheet" href="/css/vicDetails.css" />
+        <link rel="stylesheet" href="/css/tooltip.css" />
+        <link rel="icon" href="/test-icon2.webp" />
+        <link rel="stylesheet" href="/css/vicPage.css" />
+        <link rel="stylesheet" href="/css/damageStats.css" />
+    </head>
+    <body id="main">
+        <span id="bodytooltip" class="bodytooltip"
+            ><ul id="bodytooltiplist" class="bodytooltiplist">
+                <span>Armor Names:</span>
+            </ul></span
+        >
+        <nav id="nav">
+            <div
+                style="
+                    flex-direction: row;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 2em;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: center;
+                    border-bottom: 2px solid #0ef;
+                    margin-bottom: 10px;
+                "
+            >
+                <a
+                style="
+                width: 100%;
+                display: flex;
+                flex: 3;
+                padding: 0;
+                flex-wrap: wrap;
+            "
+                    href="/"
+                    >
+                    <div 
+                    style="
+                        display: flex;
+                        flex: 1;
+                        margin-right: auto;
+                        margin-left: 30px;
+                        padding: 0;
+                    "
+                    >
+                        <img id="logo" src="/test-icon2.webp">
+                    </div>
+            <h1
+                    style="
+                        flex: 2;
+                        display: flex;
+                        justify-content: center;
+                        margin: auto;
+                        position: relative;
+                        font-size: 1.5em;
+                        font-weight: bold;
+                        font-family: sans-serif;
+                        color: white;
+                    "
+                >
+                    SQUAD VEHICLES
+                </h1>
+                </a>
+                <a style="flex: 1;" href="https://discordapp.com/users/369746494414258176">
+                <p
+                    style="
+                        flex: 1;
+                        font-size: 0.8em;
+                        justify-content: center;
+                        display: flex;
+                    "
+                >
+                    BY MJH1606
+                </p>
+                </a>
+                    
+            
+                
+                
+            </div>
+            <div
+                id="type"
+                style="
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #0ef;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                "
+            >
+                <a href="/">&#8592; Back<span></span></a>
+            </div>
+        </nav>
+        <div id="divvy" class="containingDiv">
+            <div
+                    class="w3-sidebar w3-bar-block w3-black"
+                    style="
+                        display: block;
+                        height: fit-content;
+                        max-height: 60%;
+                        border: 2px solid #0ef;
+                        border-radius: 10px;
+                        text-align: center;
+                    "
+                    id="mySidebar"
+                >
+                    <button
+                        id="sideButton"
+                        class="w3-bar-item w3-button w3-large"
+                        onclick="w3_close()"
+                    >
+                        Close &times;
+                    </button>
+                    <!--Armour values and mode-->
+                    <div id="armour-panel" style="display: block;">
+                        <p>Variants:</p>
+                        <select id="variantList" style="width: 168px"></select>
+                        <p id="viewModeText0">View Mode:</p>
+                        <button
+                            id="internal"
+                        >
+                            Normal
+                        </button>
+
+                        <div
+                            id="testPens"
+                        ></div>
+                    </div>
+                </div>
+
+                <div style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                    <button
+                    id = "sidebarOpen"
+                    class="w3-button w3-white w3-xxlarge"
+                    onclick="w3_open()"
+                >
+                    &#9776;
+                </button>
+                <div>
+                    <button id="front">Front</button>
+                    <button id="back">Back</button>
+                    <button id="left">Left</button>
+                    <button id="right">Right</button>
+                </div>
+                <button id="detailsButton0">Additional Details</button>
+                
+                </div>
+            <div id="modelDiv" class="modelDiv">
+
+                
+                <div id="viewer"></div>
+                
+                <div class="slidecontainer" id="slidecontainer">
+                    <div id="damageStats" class="hidden" style="display: flex; flex-direction: column;">
+                        <p>Damage</p>
+                    </div>
+                    <select id="weaponSelect" style="width: 160px">
+                        <option selected="selected" hidden>Weapon Type</option>
+                        <optgroup id="Inf_AT" label="Infantry AT">
+                        </optgroup>
+                        <optgroup id="Other_AT" label="Other AT"></optgroup>
+                    </select>
+
+                    <input
+                        disabled
+                        type="range"
+                        min="0"
+                        max="3000"
+                        value="0"
+                        step="50"
+                        class="slider"
+                        id="mySlider"
+                    />
+                    <div style="margin-right: 20px">
+                        <p>Target Distance:</p>
+                        <p id="distance">-m</p>
+                        <p>Max Penetration:</p>
+                        <p id="maxPen">-mm</p>
+                    </div>
+                    <div>
+                        <p>Impact & Expl Damage:</p>
+                        <p id="damage">-</p>
+                        <p>Damage Type:</p>
+                        <p id="damageType">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script
+        lang="javascript"
+        type="module"
+        src="/js/vicPage-slider.js"
+    ></script>
+    <script lang="javascript" type="module" src="/js/vicPage.js"></script>
+    <script lang="javascript" type="module" src="/js/viewModes.js"></script>
+    <script lang="javascript" type="module" src="/js/modelLoader.js"></script>
+    <script>
+        function w3_open() {
+            document.getElementById('mySidebar').style.display = 'block';
+        }
+        function w3_close() {
+            document.getElementById('mySidebar').style.display = 'none';
+        }
+
+        document.addEventListener('scroll', () => {
+            document
+                .getElementById('mySidebar')
+                .style.setProperty(
+                    'top',
+                    window.pageYOffset * -1 +
+                        (document.getElementById('nav').clientHeight + 10) +
+                        'px'
+                );
+        });
+    </script>
+    <script
+        lang="javascript"
+        type="module"
+        src="./js/mobile-viewport.js"
+    ></script>
+    <script lang="javascript" type="module" src="./js/variants.js"></script>
+</html>

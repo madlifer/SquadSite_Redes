@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "vite": "^5.1.1"
+  },
+  "name": "squad_site",
+  "version": "1.1.6",
+  "description": "A website to show Squad Vehicles",
+  "main": "index.html", 
+  "vicPage": "vicPage.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "MJH1606",
+  "license": "ISC"
+}

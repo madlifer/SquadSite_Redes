@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" id="viewport" content="width=device-width, initial-scale=0, maximum-scale=1, user-scalable=yes" />
+        <meta name="author" content="MJH1606" />
+        <meta name="keywords" content="Squad, Armor, Armour, Viewer, Guide, Vehicle, Game" />
+        <meta name="description" content="Online 3d viewer to see Vehicle Armor in the Squad game" />
+        <title>Squad Armor Viewer</title>
+        <link rel="stylesheet" href="/css/navbar.css" />
+        <link rel="stylesheet" href="/css/search.css" />
+        <link rel="stylesheet" href="/css/index-list-boxes.css" />
+        <link rel="stylesheet" href="/css/scrollbar.css" />
+        <link rel="icon" href="/test-icon2.webp" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                color: #ffffff;
+            }
+            body {
+                display: flex;
+                min-height: 100vh;
+                background: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="nav">
+            <div
+                style="
+                    flex-direction: row;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 2em;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: center;
+                    border-bottom: 2px solid #0ef;
+                    margin-bottom: 10px;
+                "
+            >
+                <a
+                    style="
+                        display: flex;
+                        flex: 1;
+                        margin-right: auto;
+                        margin-left: 30px;
+                        padding: 0;
+                    "
+                    href="/"
+                    ><img id="logo" src="/test-icon2.webp"
+                /></a>
+                <h1
+                    style="
+                        flex: 2;
+                        display: flex;
+                        justify-content: center;
+                        margin: auto;
+                        position: relative;
+                    "
+                >
+                    SQUAD VEHICLES
+                </h1>
+                <a style="flex: 1;" href="https://discordapp.com/users/369746494414258176">
+                <p
+                    style="
+                        flex: 1;
+                        font-size: 0.8em;
+                        justify-content: center;
+                        display: flex;
+                    "
+                >
+                    BY MJH1606
+                </p>
+                </a>
+                    
+                
+            </div>
+            <div
+                id="type"
+                style="
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #0ef;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                "
+            >
+                <a>All<span></span></a>
+                <a>Factions<span></span></a>
+                <a>APC<span></span></a>
+                <a>IFV<span></span></a>
+                <a>MBT<span></span></a>
+                <a>Recon<span></span></a>
+                <a>Light<span></span></a>
+                <a>Aerial<span></span></a>
+                <div class="input-group">
+                    <input
+                        class="input"
+                        required
+                        autocomplete="off"
+                        type="text"
+                        name="search"
+                        id="searchSort"
+                    />
+                    <label class="label" for="searchSort">Vehicle Search</label>
+                </div>
+            </div>
+            <div
+                id="factionType"
+                style="
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    border-bottom: 2px solid #0ef;
+                    width: 100%;
+                    display: none;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                "
+            >
+                <a>BLUFOR<span></span></a>
+                <a>REDFOR<span></span></a>
+                <a>Independent<span></span></a>
+                <div
+                    id="BLUFOR"
+                    style="
+                        margin-top: 10px;
+                        padding-top: 10px;
+                        border-top: 2px solid #0ef;
+                        width: 100%;
+                        display: none;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    "
+                >
+                    <a>ADF<span></span></a>
+                    <a>BAF<span></span></a>
+                    <a>CAF<span></span></a>
+                    <a>USA<span></span></a>
+                    <a>USMC<span></span></a>
+                </div>
+                <div
+                    id="REDFOR"
+                    style="
+                        margin-top: 10px;
+                        padding-top: 10px;
+                        border-top: 2px solid #0ef;
+                        width: 100%;
+                        display: none;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    "
+                >
+                    <a>PLA<span></span></a>
+                    <a>PLANMC<span></span></a>
+                    <a>VDV<span></span></a>
+                    <a>RGF<span></span></a>
+                </div>
+                <div
+                    id="Independent"
+                    style="
+                        margin-top: 10px;
+                        padding-top: 10px;
+                        border-top: 2px solid #0ef;
+                        width: 100%;
+                        display: none;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    "
+                >
+                    <a>MEA<span></span></a>
+                    <a>TLF<span></span></a>
+                    <a>INS<span></span></a>
+                    <a>IMF<span></span></a>
+                </div>
+            </div>
+        </nav>
+        <div
+            id="vehicleSelector"
+            style="
+                display: flex;
+                flex-wrap: wrap;
+                height: 100%;
+                width: 100%;
+                z-index: 0;
+                justify-content: center;
+                margin-top: 177px;
+            "
+        ></div>
+    </body>
+    <script lang="javascript" type="module" src="./js/index.js"></script>
+    <script lang="javascript" type="module" src="./js/mobile-viewport.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RYPYCKFZZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2RYPYCKFZZ');
+    </script>
+</html>

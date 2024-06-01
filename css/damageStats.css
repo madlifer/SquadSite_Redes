@@ -1,0 +1,17 @@
+#damageStats, #damageStats2 {
+    width: 100%; /* Width of the outside container */
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+    cursor: default;
+}
+
+.visible {
+    opacity: 1;
+}
