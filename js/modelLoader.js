@@ -23,7 +23,7 @@ var camera = new THREE.PerspectiveCamera(
 )
 
 scene.background = new THREE.Color('rgb(0,0,0)')
-const renderer = new THREE.WebGLRenderer()
+const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.setSize(modelDiv.getBoundingClientRect().width, modelDiv.getBoundingClientRect().height)
 
 modelDiv.appendChild(renderer.domElement)
@@ -96,6 +96,9 @@ loader.load(
                 }
                 if (object.material.name == 'AmmoRack') {
                     object.material.thickness = 6
+                }
+                if (object.material.name == 'NoPenetration') {
+                    object.material.thickness = 0
                 }
                 var thick = object.material.name.split('mm').filter(Number)
                 if (thick.length > 0) {
@@ -295,7 +298,7 @@ var camera2 = new THREE.PerspectiveCamera(
 )
 
 scene2.background = new THREE.Color('rgb(0,0,0)')
-const renderer2 = new THREE.WebGLRenderer()
+const renderer2 = new THREE.WebGLRenderer({ antialias: true })
 renderer2.setSize(modelDiv2.getBoundingClientRect().width, modelDiv2.getBoundingClientRect().height)
 
 modelDiv2.appendChild(renderer2.domElement)

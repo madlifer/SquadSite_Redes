@@ -162,7 +162,7 @@ export var data = {
         ],
         "Opt_Name": "BMP-1",
         "Opt_Type": "IFV",
-        "Opt_Faction": ["IMF", "INS", "MEA"]
+        "Opt_Faction": ["IMF", "INS", "MEA", "RGF"]
     },
     "BMP2": {
         "Variants": [
@@ -1008,6 +1008,12 @@ export var data = {
                 "Other_Seat_Count": "7",
                 "Turret_HP": null,
                 "Other": [".50cal is an open top", "Vehicle has no doors"]
+            },
+            {
+                "Name": "M1151 MK19",
+                "HullDown": ["Untested"],
+                "Arm": ["40mm_MK19"],
+                "Other": ["Mk19 is an open top"]
             }
         ],
         "Opt_Name": "M1151",
@@ -1064,7 +1070,13 @@ export var data = {
                 "Hulldown": ["---------------------------------------"],
                 "Arm": ["TOW"],
                 "Other": ["TOW is an open top"]
-            }
+            },
+            {
+                "Name": "M-ATV MK19",
+                "HullDown": ["Untested"],
+                "Arm": ["40mm_MK19"],
+                "Other": ["Mk19 is an open top"]
+            },
         ],
         "Opt_Name": "M-ATV",
         "Opt_Type": "Light",
@@ -1469,6 +1481,15 @@ export var data = {
                 "Total_Resources": "1400",
                 "Arm": [null],
                 "Other": [null]
+            },
+            {
+                "Name": "Technical Kornet",
+                "Ticket_Value": "5",
+                "Respawn": "10 mins",
+                "Other_Seat_Count": "3",
+                "HullDown": ["Untested"],
+                "Arm": ["Kornet"],
+                "Other": [null]
             }
         ],
         "Opt_Name": "(New)Techie",
@@ -1550,6 +1571,13 @@ export var data = {
                 "HullDown": ["2.75 SandBags", "HESCO Wall"],
                 "Arm": ["7_62"],
                 "Other": ["7.62 is an open top"]
+            },
+            {
+                "Name": "M113A3 MK19",
+                "Turret_HP": null,
+                "HullDown": ["Untested"],
+                "Arm": ["40mm_MK19"],
+                "Other": ["Mk19 is an open top"]
             }
         ],
         "Opt_Name": "TLAV",
@@ -2308,5 +2336,181 @@ export var data = {
         "Opt_Name": "TB-2",
         "Opt_Type": "Heli",
         "Opt_Faction": ["TLF"]
+    },
+    "BMP2M": {
+        "Variants": [
+            {
+                "Name": "BMP-2M",
+                "Type": "IFV - Infantry Fighting Vehicle",
+                "Ticket_Value": "10",
+                "Respawn": "15 mins",
+                "Construction_Resources": "0",
+                "Ammo_Resources": "600",
+                "Total_Resources": "600",
+                "Crew_Seat_count": "3",
+                "Other_Seat_Count": "7",
+                "Main_HP": "1250",
+                "Turret_HP": "600",
+                "HEAT_Dmg": "0.3",
+                "Explosive_Dmg": "1",
+                "Kinetic_Dmg": "0.1",
+                "HAT_Dmg": "0.625",
+                "Rack_Type": "Ammo_Med",
+                "Amphibious": "Yes",
+                "HullDown": ["Untested"],
+                "Arm": ["30mm_AP++", "30mm_HE", "Kornet", "40mm_MK19", "7_62", "SmokeLauncher"],
+                "Other": ["ATGMs are Rapid-Fire"]
+            }
+        ],
+        "Opt_Name": "BMP-2M",
+        "Opt_Type": "IFV",
+        "Opt_Faction": ["RGF"]
+    },
+    "BMP3M": {
+        "Variants": [
+            {
+                "Name": "BMP-3M",
+                "Type": "IFV - Infantry Fighting Vehicle",
+                "Ticket_Value": "10",
+                "Respawn": "15 mins",
+                "Construction_Resources": "0",
+                "Ammo_Resources": "600",
+                "Total_Resources": "600",
+                "Crew_Seat_count": "2",
+                "Other_Seat_Count": "10",
+                "Main_HP": "1250",
+                "Turret_HP": "600",
+                "HEAT_Dmg": "0.3",
+                "Explosive_Dmg": "1",
+                "Kinetic_Dmg": "0.1",
+                "HAT_Dmg": "0.625",
+                "Rack_Type": "Ammo_Heavy",
+                "Amphibious": "Yes",
+                "HullDown": ["Untested"],
+                "Arm": ["30mm_AP++", "30mm_HE", "125mm_FRAG", "7_62", "Reflecks", "SmokeLauncher"],
+                "Other": [null]
+            }
+        ],
+        "Opt_Name": "BMP-3M",
+        "Opt_Type": "IFV",
+        "Opt_Faction": ["RGF"]
+    },
+    "BMP1AM": {
+        "Variants": [
+            {
+                "Name": "BMP-1AM",
+                "Type": "IFV - Infantry Fighting Vehicle",
+                "Ticket_Value": "10",
+                "Respawn": "10 mins",
+                "Construction_Resources": "0",
+                "Ammo_Resources": "600",
+                "Total_Resources": "600",
+                "Crew_Seat_count": "2",
+                "Other_Seat_Count": "7",
+                "Main_HP": "1250",
+                "Turret_HP": "600",
+                "HEAT_Dmg": "0.3",
+                "Explosive_Dmg": "1",
+                "Kinetic_Dmg": "0.1",
+                "HAT_Dmg": "0.625",
+                "Rack_Type": "Ammo_Heavy",
+                "Amphibious": "Yes",
+                "HullDown": ["Untested"],
+                "Arm": ["30mm_AP++", "30mm_HE", "7_62", "SmokeLauncher"],
+                "Other": [null]
+            }
+        ],
+        "Opt_Name": "BMP-1AM",
+        "Opt_Type": "IFV",
+        "Opt_Faction": ["RGF"]
+    },
+    "T90A": {
+        "Variants": [
+            {
+                "Name": "T-90A",
+                "Type": "MBT - Main Battle Tank",
+                "Ticket_Value": "15",
+                "Respawn": "20 mins",
+                "Construction_Resources": "0",
+                "Ammo_Resources": "50",
+                "Total_Resources": "50",
+                "Crew_Seat_count": "3",
+                "Other_Seat_Count": "0",
+                "Main_HP": "3000",
+                "Turret_HP": "2000",
+                "HEAT_Dmg": "0.3875",
+                "Explosive_Dmg": "1",
+                "Kinetic_Dmg": "0.1",
+                "HAT_Dmg": "1",
+                "Rack_Type": "Ammo_Tank",
+                "Amphibious": "No",
+                "HullDown": ["Untested"],
+                "Arm": ["Tank_AP", "125mm_HEAT", "125mm_FRAG", "Reflecks", "7_62", "SmokeLauncher", "50cal (Upgr)"],
+                "Other": [null]
+            }
+        ],
+        "Opt_Name": "T-90A",
+        "Opt_Type": "MBT",
+        "Opt_Faction": ["RGF"]
+    },
+    "M1064": {
+        "Variants": [
+            {
+                "Name": "M1064 M121",
+                "Type": "APC - Armoured Personnel Carrier",
+                "Ticket_Value": "5",
+                "Respawn": "10 mins",
+                "Construction_Resources": "0",
+                "Ammo_Resources": "600",
+                "Total_Resources": "600",
+                "Crew_Seat_count": "0",
+                "Other_Seat_Count": "3",
+                "Main_HP": "1000",
+                "Turret_HP": null,
+                "HEAT_Dmg": "0.25",
+                "Explosive_Dmg": "1",
+                "Kinetic_Dmg": "0.1",
+                "HAT_Dmg": "0.5",
+                "Amphibious": "No",
+                "HullDown": ["Untested"],
+                "Arm": ["50cal", "120_Mortar_Smoke", "120_Mortar_Airburst", "120_Mortar_HE", "SmokeLauncher"],
+                "Other": [null]
+            },
+            {
+                "Name": "M1064A3 M121",
+            },
+        ],
+        "Opt_Name": "M1064 Mortar Carrier",
+        "Opt_Type": "APC",
+        "Opt_Faction": ["USA", "TLF"]
+    },
+    "M7A3": {
+        "Variants": [
+            {
+                "Name": "M7A3 BFIST",
+                "Type": "IFV - Infantry Fighting Vehicle",
+                "Ticket_Value": "10",
+                "Respawn": "10 mins",
+                "Construction_Resources": "0",
+                "Ammo_Resources": "600",
+                "Total_Resources": "600",
+                "Crew_Seat_count": "2",
+                "Other_Seat_Count": "8",
+                "Main_HP": "2000",
+                "Turret_HP": "600",
+                "HEAT_Dmg": "0.3375",
+                "Explosive_Dmg": "1",
+                "Kinetic_Dmg": "0.1",
+                "HAT_Dmg": "1",
+                "Rack_Type": "Ammo_UltraLight",
+                "Amphibious": "No",
+                "HullDown": ["2.5 SandBags"],
+                "Arm": ["252_AP", "30mm_HE", "7_62", "SmokeLauncher"],
+                "Other": [null]
+            }
+        ],
+        "Opt_Name": "M7A3 BFIST",
+        "Opt_Type": "IFV",
+        "Opt_Faction": ["USA"]
     }
 }
