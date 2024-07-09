@@ -1634,7 +1634,7 @@ export var data = {
                 "Rack_Type": "Ammo_Med",
                 "Amphibious": "Yes",
                 "HullDown": ["---------------------------"],
-                "Arm": ["30mm_AP", "30mm_HE", "HJ73", "7_62", "SmokeLauncher"],
+                "Arm": ["30mm_AP++", "30mm_HE", "HJ73", "7_62", "SmokeLauncher"],
                 "Other": ["HJ73 can be rapid fired"]
             },
             {
