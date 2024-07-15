@@ -1,4 +1,4 @@
-if (window.location.href.includes("squad-armor.com") || window.location.href.includes("www.squad-armor.com") ){} else{
+if (window.location.href.includes("squad-armor.com") || window.location.href.includes("www.squad-armor.com") || window.location.href.includes("localhost")){} else{
     throw new Error("This site is STOLEN");
 }
 

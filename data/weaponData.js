@@ -295,6 +295,14 @@ export var weaponData = {
         "Falloff": 1,
         "Title": "All Faction C4"
     },
+    "BM21 Rocket": {
+        "BaseDamage": "1200",
+        "ExplosiveDamage": "250",
+        "Pen": [900],
+        "Damage_Type": "HAT",
+        "Trace": 100,
+        "Title": "GRAD Rockets"
+    },
     "Mortar HE": {
         "BaseDamage": "10",
         "ExplosiveDamage": "600",
