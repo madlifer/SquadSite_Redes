@@ -111,6 +111,21 @@ loader.load(
         scene.add(light)
         scene.add(gltf.scene)
         let armourPens = document.getElementById('testPens')
+
+        // Calculate the bounding box of the model
+        const box = new THREE.Box3().setFromObject(abbacab);
+        const size = box.getSize(new THREE.Vector3());
+        
+        // Calculate the distance to position the camera
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const fov = camera.fov;
+        let cameraZ = Math.abs(maxDim / 4 * Math.tan(fov * 2)) + 6;
+
+        // Position the camera a certain distance away from the model
+        camera.position.z = cameraZ;
+        camera.position.x = 3;
+        camera.position.y = box.max.y + 0.5
+
         //armourPens.innerHTML = ''
         //document.querySelector("#button1").removeAttribute('hidden')
 
@@ -383,6 +398,21 @@ loader2.load(
         scene2.add(light2)
         scene2.add(gltf.scene)
         let armourPens2 = document.getElementById('testPens2')
+
+        // Calculate the bounding box of the model
+        const box2 = new THREE.Box3().setFromObject(abbacab2);
+        const size2 = box2.getSize(new THREE.Vector3());
+        
+        // Calculate the distance to position the camera
+        const maxDim2 = Math.max(size2.x, size2.y, size2.z);
+        const fov2 = camera2.fov;
+        let cameraZ2 = Math.abs(maxDim2 / 4 * Math.tan(fov2 * 2)) + 6;
+
+        // Position the camera a certain distance away from the model
+        camera2.position.z = cameraZ2;
+        camera2.position.x = 3;
+        camera2.position.y = box2.max.y + 0.5
+
         //armourPens.innerHTML = ''
         //document.querySelector("#button1").removeAttribute('hidden')
 
